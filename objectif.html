@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Kit UX MDF</title>
+    <style>
+        body{
+            color: black;
+            padding: 1em 4em;
+            font-family: Helvetica;
+        }
+        header {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            margin: 0em 0em 3.5em 0em;
+        }
+        #logo {
+            height: 80px;
+            position: absolute; /* Position absolue par rapport à l'en-tête */
+            top: 2px; /* Alignement en haut */
+            left: -28px; /* Alignement à gauche */
+            height: 80px;
+        }
+
+        #input-search{
+            width: 30%;
+            background-image: image();
+            margin: 0% 35% 0% 35%;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5em 0px 5em 0px;
+        }
+        section{
+            padding: 0em 10em 3em 5em;
+        }
+        h1{
+            color: #235789;
+            font-weight: bold;
+            font-size: 25px;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0em 0em 3em 0em;
+        }
+        button{
+            color: #235789;
+            text-align: center;
+            padding: 0px 8px;
+            margin: 0px 1em 0px 1em;
+            border-width: 1px;
+            border-color: #235789;
+            border-radius: 17px;
+            width: 9em;
+        }
+        button:hover{
+            background-color: #235789;
+            color: white;
+        }
+        h2{
+            margin: 0em 0em 4em 0em;
+            color: #235789;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .faq{
+            max-width: 850px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #000000;
+            cursor: pointer;
+        }
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s;
+        }
+        .answer p{
+            padding-top: 0.7rem;
+            line-height: 1.6;
+        }
+        .faq.active .answer{
+            max-height: 300px;
+            animation: fade 1s ease-in-out;
+        }
+        .faq.active svg{
+            transform: rotate(180deg);
+        }
+        svg{
+            transition: transform 0.25s ease-in;
+        }
+        #obj{
+            background-color: #235789;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="logo" id="logo"></a>        
+        <h1>
+            Vous souhaitez entreprendre un évènement d’entreprise en interne ?
+        </h1>
+    </header>
+    <input type="search" id="input-search" placeholder="Mots clés">
+    <nav>
+        <a href="objectif.html">
+            <button id="obj">Objectif</button>
+        </a>
+        <a href="collaborateurs.html">
+            <button id="coll">Collaborateurs</button>
+        </a>
+        <a href="methodologie.html">
+            <button>Méthodologie</button>
+        </a>
+        <a href="analyse.html">
+            <button>Analyse</button>
+        </a>
+        <a href="mise-en-forme.html">
+            <button>Mise en forme</button>
+        </a>      
+    </nav>
+    <div class="objectif"> 
+        <main>       
+            <h2>
+                Définir l’objectif de votre recherche
+            </h2>
+            <section>   
+                <h3>
+                    Qu'est-ce que la recherche utilisateur ?
+                </h3>
+                <p>
+                    La recherche utilisateur en UX (Expérience Utilisateur) est le processus de compréhension des besoins, des comportements et des motivations de votre public cible à travers l'observation, la pose de questions, et d'autres techniques d'analyse. C'est une étape fondamentale pour concevoir des solutions qui répondent réellement aux attentes des utilisateurs.    
+                </p>
+            </section>
+            <section>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Renforcer la cohésion d'équipe :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                        L'un des principaux objectifs de tout événement interne devrait être de renforcer les liens entre les membres de l'équipe. Cela peut être réalisé en encourageant la collaboration, la communication et le partage d'expériences entre les départements et les niveaux hiérarchiques.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Promouvoir la culture d'entreprise :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Les événements internes offrent une excellente opportunité de promouvoir les valeurs, la mission et la vision de l'entreprise. En organisant des activités qui reflètent la culture d'entreprise, vous pouvez renforcer le sentiment d'appartenance des employés et favoriser l'alignement avec les objectifs organisationnels.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Favoriser l'innovation et la créativité :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Les événements internes peuvent servir de catalyseurs pour stimuler l'innovation et la créativité au sein de l'entreprise. En proposant des ateliers, des sessions de brainstorming ou des défis créatifs, vous pouvez encourager les employés à penser différemment et à générer de nouvelles idées pour l'entreprise.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Améliorer le bien-être et la motivation des employés :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Les événements internes peuvent servir de catalyseurs pour stimuler l'innovation et la créativité au sein de l'entreprise. En proposant des ateliers, des sessions de brainstorming ou des défis créatifs, vous pouvez encourager les employés à penser différemment et à générer de nouvelles idées pour l'entreprise.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Faciliter le développement professionnel :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                        L'un des principaux objectifs de tout événement interne devrait être de renforcer les liens entre les membres de l'équipe. Cela peut être réalisé en encourageant la collaboration, la communication et le partage d'expériences entre les départements et les niveaux hiérarchiques.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Promouvoir l'engagement et la rétention des talents :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                        L'un des principaux objectifs de tout événement interne devrait être de renforcer les liens entre les membres de l'équipe. Cela peut être réalisé en encourageant la collaboration, la communication et le partage d'expériences entre les départements et les niveaux hiérarchiques.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Renforcer les relations avec les parties prenantes externes :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Enfin, certains événements internes peuvent également servir à renforcer les relations avec les clients, les fournisseurs ou d'autres partenaires externes de l'entreprise. Cela peut être réalisé en invitant ces parties prenantes à participer à des événements spécifiques ou à des activités de réseautage.
+                            <br>
+                            En définissant clairement ces objectifs dès le départ, les collaborateurs pourront orienter leur planification et leur exécution d'événements internes pour maximiser leur impact et leur succès au sein de l'organisation.
+                        </p>      
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script>
+            const faqs = document.querySelectorAll(".faq");
+            faqs.forEach((faq) => {
+                faq.addEventListener("click", () => {
+                    faq.classList.toggle("active");
+                })
+            })
+        </script>
+    </div>
+</body>
+</html>

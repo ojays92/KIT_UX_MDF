@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Kit UX MDF</title>
+    <style>
+        body{
+            color: black;
+            padding: 1em 4em;
+            font-family: Helvetica;
+        }
+        header {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            margin: 0em 0em 3.5em 0em;
+        }
+        #logo {
+            height: 80px;
+            position: absolute; /* Position absolue par rapport à l'en-tête */
+            top: 2px; /* Alignement en haut */
+            left: -28px; /* Alignement à gauche */
+            height: 80px;
+        }
+
+        #input-search{
+            width: 30%;
+            background-image: image();
+            margin: 0% 35% 0% 35%;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5em 0px 5em 0px;
+        }
+        section{
+            padding: 0em 10em 3em 5em;
+        }
+        h1{
+            color: #235789;
+            font-weight: bold;
+            font-size: 25px;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0em 0em 3em 0em;
+        }
+        button{
+            color: #235789;
+            text-align: center;
+            padding: 0px 8px;
+            margin: 0px 1em 0px 1em;
+            border-width: 1px;
+            border-color: #235789;
+            border-radius: 17px;
+            width: 9em;
+        }
+        button:hover{
+            background-color: #235789;
+            color: white;
+        }
+        h2{
+            margin: 0em 0em 4em 0em;
+            color: #235789;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .faq{
+            max-width: 850px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #000000;
+            cursor: pointer;
+        }
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s;
+        }
+        .answer p{
+            padding-top: 0.7rem;
+            line-height: 1.6;
+        }
+        .faq.active .answer{
+            max-height: 300px;
+            animation: fade 1s ease-in-out;
+        }
+        .faq.active svg{
+            transform: rotate(180deg);
+        }
+        svg{
+            transition: transform 0.25s ease-in;
+        }
+        #methodo{
+            background-color: #235789;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="logo" id="logo"></a>       
+        <h1>
+            Vous souhaitez entreprendre un évènement d’entreprise en interne ?
+        </h1>
+    </header>
+    <input type="search" id="input-search" placeholder="Mots clés">
+    <nav>
+        <a href="objectif.html">
+            <button id="obj">Objectif</button>
+        </a>
+        <a href="collaborateurs.html">
+            <button id="coll">Collaborateurs</button>
+        </a>
+        <a href="methodologie.html">
+            <button id="methodo">Méthodologie</button>
+        </a>
+        <a href="analyse.html">
+            <button>Analyse</button>
+        </a>
+        <a href="mise-en-forme.html">
+            <button>Mise en forme</button>
+        </a>      
+    </nav>
+    <div class="methodo"> 
+        <main>       
+            <h2>
+                La méthodologie de recherche 
+            </h2>
+            <section>   
+                <p>
+                    La méthodologie de recherche définit les outils et les techniques utilisés pour recueillir des données sur les besoins, les préférences et les attentes des collaborateurs. En choisissant les méthodes appropriées, cette étape assure une collecte de données précise et approfondie, fournissant ainsi une base solide pour la conception de l'événement.
+                </p>
+            </section>
+            <section>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Entretiens individuels approfondis :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Les entretiens individuels approfondis constituent une méthode efficace pour recueillir des données qualitatives détaillées sur les besoins et les attentes des collaborateurs. En menant des entretiens personnalisés avec un échantillon représentatif de participants à l'événement, les organisateurs peuvent explorer en profondeur les expériences passées, les préférences et les suggestions d'amélioration.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Groupes de discussion thématiques :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Les groupes de discussion thématiques réunissent un petit groupe de collaborateurs partageant des intérêts ou des préoccupations communes pour discuter en profondeur de sujets spécifiques liés à l'événement. En organisant des groupes de discussion sur des thèmes pertinents tels que la convivialité, la diversité des activités proposées ou les attentes en matière de développement personnel, les organisateurs peuvent obtenir des insights riches et variés.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Enquête en ligne :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Les enquêtes en ligne permettent de recueillir des données quantitatives auprès d'un grand nombre de participants de manière rapide et efficace. En élaborant des questionnaires bien structurés et ciblés, les organisateurs peuvent obtenir des informations sur les préférences générales, les niveaux de satisfaction et les suggestions d'amélioration de l'événement. Les résultats peuvent ensuite être analysés statistiquement pour identifier les tendances et les priorités.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Observation participante :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            L'observation participante consiste à observer et à participer activement à l'événement en tant qu'organisateur ou facilitateur. En observant directement les interactions, les comportements et les réactions des participants, les organisateurs peuvent obtenir des insights précieux sur leur expérience réelle et identifier les points forts et les points faibles de l'événement.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Feedback et suggestions :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Il est judicieux de solliciter activement le feedback et les suggestions des collaborateurs pour comprendre leurs besoins et leurs attentes en matière d'événements internes. La collecte régulière de feedback peut fournir des insights précieux pour améliorer continuellement la pertinence et la qualité des événements organisés.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Analyse des médias sociaux :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Enfin, l'analyse des médias sociaux peut fournir des insights supplémentaires sur l'expérience des participants à l'événement. En surveillant les discussions en ligne, les mentions de l'événement et les commentaires des participants sur les plateformes sociales, les organisateurs peuvent obtenir des informations précieuses sur les points forts et les points faibles de l'événement, ainsi que sur les suggestions d'amélioration.
+                        </p> 
+                        <p>
+                            En combinant ces différentes méthodes de recherche, les organisateurs peuvent obtenir une vision complète et approfondie des besoins et des attentes des collaborateurs ciblés ayant été conviés à l'événement interne. Cela leur permettra de mieux comprendre leurs préférences et de planifier des événements futurs plus pertinents et engageants pour 
+                            l'ensemble de l'organisation.
+                        </p>     
+                    </div>
+                </div>
+            </section>
+            <script>
+                const faqs = document.querySelectorAll(".faq");
+                faqs.forEach((faq) => {
+                    faq.addEventListener("click", () => {
+                        faq.classList.toggle("active");
+                    })
+                })
+            </script>
+        </main>
+    </div>
+</body>
+</html>

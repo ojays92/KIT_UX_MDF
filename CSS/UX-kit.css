@@ -1,0 +1,84 @@
+body{
+    color: black;
+    padding: 1em 4em;
+    font-family: Helvetica;
+}
+#logo{
+    width: 5em;
+    height: auto;
+    position: sticky;
+}
+#barre-de-recherche{
+    width: 25%;
+    /* background: url("loupe.png") no-repeat; */
+    background-image: image();
+    margin: 0% 37.5% 0% 37.5%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5em 0px 5em 0px;
+}
+section{
+    padding: 0em 10em 3em 5em;
+}
+h1{
+    color: #235789;
+    font-weight: bold;
+    font-size: 25px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0em 0em 3em 0em;
+}
+button{
+    color: #235789;
+    text-align: center;
+    padding: 0px 8px;
+    margin: 0px 1em 0px 1em;
+    border-width: 1px;
+    border-color: #235789;
+    border-radius: 17px;
+    width: 9em;
+}
+button:hover{
+    background-color: #235789;
+    color: white;
+}
+button:active{
+    background-color: green;
+}
+h2{
+    margin: 0em 0em 4em 0em;
+    color: #235789;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+.faq{
+    max-width: 850px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #000000;
+    cursor: pointer;
+}
+.question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+}
+.answer p{
+    padding-top: 0.7rem;
+    line-height: 1.6;
+}
+.faq.active .answer{
+    max-height: 300px;
+}

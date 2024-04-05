@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Kit UX MDF</title>
+    <style>
+        body{
+            color: black;
+            padding: 1em 4em;
+            font-family: Helvetica;
+        }
+        header {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            margin: 0em 0em 3.5em 0em;
+        }
+        #logo {
+            height: 80px;
+            position: absolute; /* Position absolue par rapport à l'en-tête */
+            top: 2px; /* Alignement en haut */
+            left: -28px; /* Alignement à gauche */
+            height: 80px;
+        }
+
+        #input-search{
+            width: 30%;
+            background-image: image();
+            margin: 0% 35% 0% 35%;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5em 0px 5em 0px;
+        }
+        section{
+            padding: 0em 10em 3em 5em;
+        }
+        h1{
+            color: #235789;
+            font-weight: bold;
+            font-size: 25px;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0em 0em 3em 0em;
+        }
+        button{
+            color: #235789;
+            text-align: center;
+            padding: 0px 8px;
+            margin: 0px 1em 0px 1em;
+            border-width: 1px;
+            border-color: #235789;
+            border-radius: 17px;
+            width: 9em;
+        }
+        button:hover{
+            background-color: #235789;
+            color: white;
+        }
+        h2{
+            margin: 0em 0em 4em 0em;
+            color: #235789;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .faq{
+            max-width: 850px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #000000;
+            cursor: pointer;
+        }
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s;
+        }
+        .answer p{
+            padding-top: 0.7rem;
+            line-height: 1.6;
+        }
+        .faq.active .answer{
+            max-height: 300px;
+            animation: fade 1s ease-in-out;
+        }
+        .faq.active svg{
+            transform: rotate(180deg);
+        }
+        svg{
+            transition: transform 0.25s ease-in;
+        }
+        #analyse{
+            background-color: #235789;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="logo" id="logo"></a>       
+        <h1>
+            Vous souhaitez entreprendre un évènement d’entreprise en interne ?
+        </h1>
+    </header>
+    <input type="search" id="input-search" placeholder="Mots clés">
+    <nav>
+        <a href="objectif.html">
+            <button id="obj">Objectif</button>
+        </a>
+        <a href="collaborateurs.html">
+            <button id="coll">Collaborateurs</button>
+        </a>
+        <a href="methodologie.html">
+            <button id="methodo">Méthodologie</button>
+        </a>
+        <a href="analyse.html">
+            <button id="analyse">Analyse</button>
+        </a>
+        <a href="mise-en-forme.html">
+            <button>Mise en forme</button>
+        </a>      
+    </nav>
+    <div class="methodo"> 
+        <main>       
+            <h2>
+                L'analyse et la synthèse des données :
+            </h2>
+            <section>   
+                <p>
+                    Cette étape consiste à examiner et à interpréter les données collectées pour en extraire des insights significatifs. En analysant les informations recueillies, on peut mieux comprendre les attentes des collaborateurs et identifier les domaines à améliorer ou à optimiser pour garantir le succès de l'événement.
+                </p>
+            </section>
+            <section>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Codage et catégorisation des données :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Tout d'abord, il est important de procéder au codage et à la catégorisation des données collectées lors de la recherche. Cela implique d'identifier les thèmes, les motifs récurrents et les tendances émergentes dans les réponses des participants aux entretiens, aux enquêtes et aux observations.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Analyse des sentiments :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            En complément du codage des données, il peut être utile d'effectuer une analyse des sentiments pour évaluer les réactions émotionnelles des participants à l'événement. Cela permet de comprendre non seulement ce que les collaborateurs ont dit, mais aussi comment ils se sont sentis à propos de différents aspects de l'événement.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Identifiaction des points forts et des points faibles :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            En examinant les données de manière approfondie, il est possible d'identifier les points forts et les points faibles de l'expérience de l'événement. Cela peut inclure des aspects tels que la convivialité, la diversité des activités proposées, la qualité des interactions sociales, etc.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Évaluation de la satisfaction et de l'engagement :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Une analyse approfondie des données permet également d'évaluer la satisfaction globale des participants à l'événement ainsi que leur niveau d'engagement. Cela peut être mesuré à travers des indicateurs tels que le taux de participation, les évaluations de satisfaction et les commentaires positifs ou négatifs.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Synthèse des insights clés :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Une fois les données analysées, il est important de synthétiser les insights clés dans un format facilement compréhensible et utilisable. Cela peut impliquer la création de tableaux de bord, de rapports de synthèse ou de présentations PowerPoint mettant en évidence les principales conclusions et recommandations issues de l'analyse.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Validation des conclusions :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Avant de passer à la phase de planification et de mise en œuvre d'événements futurs, il est essentiel de valider les conclusions de l'analyse avec les parties prenantes concernées. Cela permet de s'assurer que les insights obtenus sont précis et pertinents, et de garantir un consensus autour des recommandations à suivre.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Plan d'action et mise en œuvre des recommandations :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Enfin, sur la base des insights obtenus, il convient d'élaborer un plan d'action détaillé pour mettre en œuvre les recommandations identifiées. Cela peut inclure des ajustements à apporter aux événements existants, ainsi que des idées pour de nouveaux événements qui répondent mieux aux besoins et aux attentes des collaborateurs.
+                        </p>      
+                    </div>
+                </div>
+            </section>
+            <script>
+                const faqs = document.querySelectorAll(".faq");
+                faqs.forEach((faq) => {
+                    faq.addEventListener("click", () => {
+                        faq.classList.toggle("active");
+                    })
+                })
+            </script>
+        </main>
+    </div>
+</body>
+</html>

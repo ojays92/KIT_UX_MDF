@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/turretcss/dist/turretcss.min.css" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <title>Kit UX MDF</title>
+    <style>
+        body{
+            color: black;
+            padding: 1em 4em;
+            font-family: Helvetica;
+        }
+        header {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            margin: 0em 0em 3.5em 0em;
+        }
+        #logo {
+            height: 80px;
+            position: absolute; /* Position absolue par rapport à l'en-tête */
+            top: 2px; /* Alignement en haut */
+            left: -28px; /* Alignement à gauche */
+            height: 80px;
+        }
+
+        #input-search{
+            width: 30%;
+            background-image: image();
+            margin: 0% 35% 0% 35%;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5em 0px 5em 0px;
+        }
+        section{
+            padding: 0em 10em 3em 5em;
+        }
+        h1{
+            color: #235789;
+            font-weight: bold;
+            font-size: 25px;
+            display: inline-block;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0em 0em 3em 0em;
+        }
+        button{
+            color: #235789;
+            text-align: center;
+            padding: 0px 8px;
+            margin: 0px 1em 0px 1em;
+            border-width: 1px;
+            border-color: #235789;
+            border-radius: 17px;
+            width: 9em;
+        }
+        button:hover{
+            background-color: #235789;
+            color: white;
+        }
+        h2{
+            margin: 0em 0em 4em 0em;
+            color: #235789;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .faq{
+            max-width: 850px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #000000;
+            cursor: pointer;
+        }
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s;
+        }
+        .answer p{
+            padding-top: 0.7rem;
+            line-height: 1.6;
+        }
+        .faq.active .answer{
+            max-height: 300px;
+            animation: fade 1s ease-in-out;
+        }
+        .faq.active svg{
+            transform: rotate(180deg);
+        }
+        svg{
+            transition: transform 0.25s ease-in;
+        }
+        #mef{
+            background-color: #235789;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="logo" id="logo"></a>       
+        <h1>
+            Vous souhaitez entreprendre un évènement d’entreprise en interne ?
+        </h1>
+    </header>
+    <input type="search" id="input-search" placeholder="Mots clés">
+    <nav>
+        <a href="objectif.html">
+            <button id="obj">Objectif</button>
+        </a>
+        <a href="collaborateurs.html">
+            <button id="coll">Collaborateurs</button>
+        </a>
+        <a href="methodologie.html">
+            <button id="methodo">Méthodologie</button>
+        </a>
+        <a href="analyse.html">
+            <button id="analyse">Analyse</button>
+        </a>
+        <a href="mise-en-forme.html">
+            <button id="mef">Mise en forme</button>
+        </a>      
+    </nav>
+    <div class="methodo"> 
+        <main>       
+            <h2>
+                La mise en place et mise en forme du livrable :
+            </h2>
+            <section>   
+                <p>
+                    Enfin, cette étape consiste à utiliser les insights obtenus pour concevoir et mettre en œuvre l'événement interne. Elle implique la planification et l'organisation des activités, la communication avec les participants, ainsi que la création de livrables tels que des rapports ou des présentations pour partager les résultats et les recommandations issues de la recherche.
+                </p>
+            </section>
+            <section>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Personnalisation de l'événement :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>               
+                        En utilisant les insights obtenus lors de la recherche, il est possible de personnaliser l'événement pour répondre aux besoins et aux attentes spécifiques des différents groupes de collaborateurs. Par exemple, les activités, les présentations et les ateliers peuvent être adaptés en fonction des préférences identifiées pour garantir une expérience pertinente et engageante pour tous les participants.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Diversité des activités proposées :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            En tenant compte des centres d'intérêt et des préférences des collaborateurs, l'événement peut inclure une variété d'activités pour répondre à différents goûts et styles. Cela peut inclure des ateliers de team building, des sessions de développement professionnel, des démonstrations de produits, des performances artistiques, etc. L'objectif est de créer un programme diversifié qui suscite l'intérêt et l'engagement de tous les participants.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Élaboration d'une expérience immersive :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            L'événement peut être conçu pour offrir une expérience immersive qui va au-delà de la simple participation. Cela peut inclure des éléments interactifs, des installations artistiques, des espaces de détente confortables, etc., pour créer un environnement stimulant et mémorable qui encourage l'exploration et la découverte.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Communication efficace et anticipation des besoins :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Sur la base des insights obtenus, une communication efficace peut être mise en place pour informer les participants sur les détails de l'événement, les activités proposées et les opportunités disponibles. De plus, en anticipant les besoins des participants, comme la nourriture et les boissons, les installations sanitaires, ou les besoins en accessibilité, l'événement peut être organisé de manière à assurer le confort et la satisfaction des participants.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Intégration de feedback en temps réel :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Pendant l'événement, des mécanismes de feedback en temps réel peuvent être mis en place pour recueillir les impressions et les suggestions des participants. Cela peut être réalisé via des enquêtes rapides, des kiosques de feedback, ou des applications mobiles dédiées. En intégrant le feedback des participants en temps réel, des ajustements peuvent être apportés à l'événement pour améliorer l'expérience globale des participants.
+                        </p>      
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">
+                        <h4>Évaluation post-événement et planification future :</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>                </div>
+                    <div class="answer">
+                        <p>
+                            Après l'événement, une évaluation approfondie peut être réalisée en analysant les données de feedback, les statistiques de participation, et les retours d'expérience des participants. Sur la base de ces informations, des leçons peuvent être tirées pour guider la planification des événements futurs et pour continuer à améliorer l'expérience des collaborateurs au fil du temps.
+                        </p>      
+                    </div>
+                </div>
+            </section>
+            <script>
+                const faqs = document.querySelectorAll(".faq");
+                faqs.forEach((faq) => {
+                    faq.addEventListener("click", () => {
+                        faq.classList.toggle("active");
+                    })
+                })
+            </script>
+        </main>
+    </div>
+</body>
+</html>
